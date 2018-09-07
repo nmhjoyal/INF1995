@@ -1,0 +1,73 @@
+Polytechnique Montréal
+
+Département de génie informatique et génie logiciel
+
+INF1995: Projet initial en ingénierie informatique
+         et travail en équipe
+
+Grille de correction des programmes:
+
+Identification:
+  Travail Pratique # : tp3
+  Section #  : 05
+  Équipe #   : 102
+  Correcteur : Yonni Chen
+
+
+Lisibilité:(4.75/5)
+  En-têtes en début de programme et de fonctions   (1 point) : 1
+  Identificateurs significatifs (variables, etc.)  (1 point) : 1
+  Commentaires aux endroits stratégiques           (1 point) : 1
+  Indentation et facilité de lecture               (1 point) : 0.75
+  Broches, ressources matérielles bien identifiées (1 point) : 1
+
+Modularité et comprehension: (5/5)
+  Les fonctions sont assez courtes, bien
+        établies et avec de bons paramètres        (1 point) : 1
+  Le code reflète une bonne compréhension
+        des concepts de base                       (2 points): 2
+  Le code montre que la solution proposée
+        permet de bien résoudre le problème        (2 points): 2
+
+Fonctionnalité:(10/10)
+  Soumission réussie sous GIT (bon endroit,
+        sans fichiers inutiles)                    (3 points): 3
+  Compilation sans "warnings" et sans erreurs      (2 point) : 2
+  Fonctionnement correct (évalué en "boite noire") (5 points): 5
+
+
+Total: 19.75/20
+
+
+Commentaires du correcteur:
+
+[-0.25]
+# Le code des if et des fonctions doit être sur la prochaine ligne, cela rend la lecture plus
+  facile et agréable. Evitez également les "one-liner" pour les fonctions. Au lieu
+  de faire :
+
+  void eteindre() {PORTB = ETEINT;}   faites:
+
+  void eteindre() {
+      PORTB = ETEINT;
+  }
+
+
+
+======================= Présence de gitignore(s) ===============================
+
+Aucun gitignore trouvé :(
+
+====================== Fichiers Indésirables ===================================
+
+
+====================== Output de make pour les problemes =======================
+
+============== output make dans tp/tp3/pb1 ============================
+avr-gcc -I. -MMD  -g -mmcu=atmega324pa -Os -fpack-struct -fshort-enums -funsigned-bitfields -funsigned-char -Wall -DF_CPU=8000000                                   -fno-exceptions      -c TP3_Ex1.cpp
+avr-gcc -Wl,-Map,Robie.out.map -mmcu=atmega324pa -o Robie.out  TP3_Ex1.o \
+-lm 
+============== output make dans tp/tp3/pb2 ============================
+avr-gcc -I. -MMD  -g -mmcu=atmega324pa -Os -fpack-struct -fshort-enums -funsigned-bitfields -funsigned-char -Wall -DF_CPU=8000000                                   -fno-exceptions      -c TP3_Ex2.cpp
+avr-gcc -Wl,-Map,Robie.out.map -mmcu=atmega324pa -o Robie.out  TP3_Ex2.o \
+-lm 

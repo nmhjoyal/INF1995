@@ -1,0 +1,92 @@
+
+DBT;
+SGO 64;
+ATT 5;
+SGO 64;
+ATT 5;
+SAR;
+ATT 5;
+SGO 64;
+ATT 5;
+SAR;
+ATT 5;
+SGO 60;
+ATT 5;
+SGO 64;
+ATT 5;
+SAR;
+ATT 5;
+SGO 67;
+ATT 5;
+SAR;
+ATT 5;
+SAR;
+ATT 5;
+SAR;
+ATT 5;
+SGO 55;
+DAL 1;
+ATT 5;
+SAR;
+ATT 5;
+SAR;
+ATT 5;
+SAR;
+ATT 5;
+SAR;
+DET 1;
+
+DBC 1;
+DAL 1;
+ATT 10;
+DET 1;
+ATT 10;
+DAL 1;
+ATT 10;
+DET 1;
+ATT 10;
+FBC;
+
+DAL 1;
+MAV 255;
+ATT 50 ;
+MAV 200;
+ATT 50 ;
+MAV 150;
+ATT 50 ;
+MAV 100;
+ATT 50 ;
+MAV 50;
+ATT 50 ;
+DET 1;
+SGO 69 ;
+TRD ;
+TRD ;
+TRD ;
+TRD ;
+SAR ;
+MAR ;
+
+DAL 1;
+MRE 50;
+ATT 50 ;
+TRG ;
+MRE 100;
+ATT 50 ;
+TRG ;
+MRE 150;
+ATT 50 ;
+TRG ;
+MRE 200;
+ATT 50 ;
+TRG ;
+MRE 250;
+ATT 50 ;
+DET 1;
+
+
+
+FIN ;
+
+MAV 255 ;
+DAL 1 ;

@@ -1,0 +1,9 @@
+*.o
+*.d
+*.out
+*.out.map
+*.hex
+
+# Swap files de vim
+*.swp
+*.swn
