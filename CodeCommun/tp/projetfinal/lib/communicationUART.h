@@ -6,25 +6,26 @@
 *
 **/
 
+#ifndef COMMUNICATIONUART_H
+#define COMMUNICATIONUART_H
+
+
 #pragma once
 
-#include "constantes.h"
 
-namespace libProjet 
+#include "Constantes.h"
+
+class CommunicationUART
 {
-	class communicationUART
-	{
+public:
 	
-	public:
-	
-		void initialisationUART(void);
+	void initialisationUART(void);
 
-		void transmissionUART(uint8_t donnee);
-		
-		unsigned char USART_Receive();
-	};
-}
+	void transmissionUART(uint8_t donnee);
+	uint8_t receiveUART();
+};
 
+#endif
 
 
 

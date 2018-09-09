@@ -6,25 +6,23 @@
 *
 **/
 
-#include "communicationUART.h"
-
-using namespace libProjet;
+#include "CommunicationUART.h"
 
 /*********************************************
 * Initialisation des registres pour permettre 
 * la reception et la transmission du UART
 **********************************************/
 
-void communicationUART::initialisationUART ( void ) {
+void CommunicationUART::initialisationUART ( void ) {
 
 	//Initialisation des registres
 	UBRR0H = 0;
 	UBRR0L = 0xCF;
 
 	UCSR0A = 0 ;
-	UCSR0B = (1<<RXEN0)|(1<<TXEN0) ;
+	UCSR0B = (1<<RXEN0)|(1<<TXEN0)|(1<<RXCIE0);
 	
-	UCSR0C = (3<<UCSZ00) ;
+	UCSR0C = (1<<USBS0)|(3<<UCSZ00) ;
 
 }
 
@@ -36,7 +34,7 @@ void communicationUART::initialisationUART ( void ) {
 * 		 Un octet transmise a l'USB
 *********************************************/
 
-void communicationUART::transmissionUART ( uint8_t donnee ) {
+void CommunicationUART::transmissionUART ( uint8_t donnee ) {
 	
 	while ( !( UCSR0A & (1<<UDRE0)) );
 	//Put data into buffer, sends the data
@@ -50,7 +48,7 @@ void communicationUART::transmissionUART ( uint8_t donnee ) {
 * 		  UDR0
 *********************************************/
 
-unsigned char communicationUART::USART_Receive()
+uint8_t CommunicationUART::receiveUART()
 {
 	//test s'il y a une donnee a recevoir
 	while(!(UCSR0A & (1<<RXC0)));

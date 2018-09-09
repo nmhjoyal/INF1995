@@ -6,14 +6,15 @@
  * la DEL est relie aux pins 1 et 2 du Port B 
  *
  **/
+#ifndef DELAIS_H
+#define DELAIS_H
 
-#include "constantes.h"
+#include "Constantes.h"
 
-namespace libProjet
-{
-	class delais {
+class Delais {
 	public:
 		void delaisVariableUs(uint8_t n);
 		void delaisVariableMs(uint8_t n);
-	};
-}
+};
+
+#endif

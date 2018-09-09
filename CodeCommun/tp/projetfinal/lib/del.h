@@ -7,22 +7,24 @@
  *
  **/
  
-#pragma once
+#ifndef DEL_H
+#define DEL_H
 
-#include "constantes.h"
+#include "Constantes.h"
 
-namespace libProjet
+class Del
 {
+public:
 
-	class del
-	{
-		public:
+	Del();
 		
-			void eteindre();
-			void allumerRouge();
-			void allumerVert();
-			void allumerAmbre(uint16_t dureeMS);
-			void clignoterLumiere(uint8_t COULEUR);
-	};
-}
+	void eteindre();
+	void allumerRouge();
+	void allumerVert();
+	void allumerAmbre(uint16_t dureeMS);
+	void clignoterLumiere(uint8_t COULEUR);
+	
+private:
+};
 
+#endif

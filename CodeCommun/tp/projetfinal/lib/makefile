@@ -25,15 +25,7 @@ PROJECTNAME= libProjet
 # Utilisez le suffixe .cpp pour les fichiers C++
 # Listez tous les fichiers a compiler, separes par
 # un espace. exemple: 'tp1.c tp2.cpp':
-PRJSRC= can.cpp communicationUART.cpp del.cpp delais.cpp memoire_24.cpp moteur.cpp
-
-# Inclusions additionnels (ex: -I/path/to/mydir)
-INC=
-
-# Libraires a lier (ex: -lmylib)
-LIBS=
-
-
+PRJSRC= $(wildcard *.cpp)
 
 ####################################################
 #####         Configuration terminee           #####

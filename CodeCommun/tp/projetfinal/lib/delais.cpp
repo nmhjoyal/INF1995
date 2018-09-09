@@ -5,9 +5,8 @@
  * DATE DE MODIFICATION : 28 mars 2018 
  **/
 
-#include "delais.h"
+#include "Delais.h"
 
-using namespace libProjet;
 
 /******************************************
  * sert à faire une fonction delays_ qui 
@@ -15,7 +14,7 @@ using namespace libProjet;
  ******************************************/
  
  // applique n fois un delais de 10 us
-void delaisVariableUs(uint8_t n){
+void Delais::delaisVariableUs(uint8_t n){
 	for (uint8_t i = 0; i < n; i++) 
 	{
 		_delay_us(10); 
@@ -23,7 +22,7 @@ void delaisVariableUs(uint8_t n){
 }
 
 // applique n fois un delais de 1 ms
-void delaisVariableMs(uint8_t n){
+void Delais::delaisVariableMs(uint8_t n){
 	for (uint8_t i = 0; i < n; i++) 
 	{
 		_delay_ms(1); 

@@ -7,15 +7,21 @@
  *
  **/
  
-#include "del.h"
+#include "Del.h"
 
-using namespace libProjet;
+
+/************************************
+ * Le constructeur met les pins 1 et 2 du port b en sortie
+ ************************************/
+Del::Del()
+{
+	DDRB |= 0x03;
+}
 
 /************************************
  * La fonction eteint la DEL
  ************************************/
-
-void del::eteindre() 
+void Del::eteindre() 
 {
 	PORTB = ETEINT;
 }
@@ -23,7 +29,7 @@ void del::eteindre()
 /*************************************************
  * La fonction allumerRouge allume la DEL en rouge
  *************************************************/
-void del::allumerRouge() 
+void Del::allumerRouge() 
 {
 	PORTB = ROUGE;
 }
@@ -32,7 +38,7 @@ void del::allumerRouge()
 /************************************************
  * La fonction allumerVert allume la DEL en vert
  ************************************************/
-void del::allumerVert() 
+void Del::allumerVert() 
 {
 	PORTB = VERT;
 }
@@ -42,7 +48,7 @@ void del::allumerVert()
  * pour un duree en millisecondes
  * Param: (IN) dureeMS 
  **************************************************/
-void del::allumerAmbre(uint16_t dureeMS) 
+void Del::allumerAmbre(uint16_t dureeMS) 
 {
 	for(uint16_t i=0; i<(dureeMS/10); i++)
 	{
@@ -64,7 +70,7 @@ void del::allumerAmbre(uint16_t dureeMS)
  * 		    
  **************************************************/
 
-void del::clignoterLumiere(uint8_t COULEUR){
+void Del::clignoterLumiere(uint8_t COULEUR){
 
 	switch (COULEUR){
 		case ROUGE:

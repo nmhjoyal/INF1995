@@ -94,7 +94,7 @@ int main()
 	uint8_t chaineCaract[] = {"why so serious\xFF"};
 	
 	
-	memoire.ecriture(0x00, chaineCaract, sizeof(chaineCaract));
+	//memoire.ecriture(0x00, chaineCaract, sizeof(chaineCaract));
 	_delay_ms(5);
 	uint8_t donneeLue[sizeof(chaineCaract)];
 	

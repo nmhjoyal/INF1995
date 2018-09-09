@@ -16,7 +16,6 @@
 
 
 //Frequence CPU 
-#define F_CPU   8000000
 
 //Set ports en SORTIE ou en ENTREE
 #define SORTIE  0xff
@@ -35,5 +34,17 @@
 #define AVANCER 0
 #define RECULER 1
 
+
+//Options du robot
+#define DROIT 0
+#define GAUCHE 1
+
+//Varacteristiques des capteurs du robot
+#define MAX_15_GAUCHE 78
+#define MAX_15_DROIT 76
+#define MIN_15_GAUCHE 68
+#define MIN_15_DROIT 66
+#define VIDE_GAUCHE 19
+#define VIDE_DROIT 17
 
 #endif

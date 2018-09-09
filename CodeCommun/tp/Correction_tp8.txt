@@ -63,7 +63,7 @@ Commentaires du correcteur:
 
 # Attention aux warnings lors du make. Aucun points ne sera retiré pour ce TP
   mais ce sera probablement le cas pour le projet final
-  
+  $(CC) 
 ====================== Fichiers Indésirables ===================================
 
 Aucun
